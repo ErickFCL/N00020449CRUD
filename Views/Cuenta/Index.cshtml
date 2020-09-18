@@ -1,0 +1,49 @@
+﻿
+<h1>Cuentas</h1>
+<a href="/cuenta/crear">Crear Cuenta</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>FechaNacimiento</th>
+            <th>DNI</th>
+            <th>Sexo</th>
+            <th>Ciudad</th>
+            <th>Direccion</th>
+            <th>CorreoElectronico</th>
+            <th>UserName</th>
+            <th>Contrasenia</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+           
+            var cuentas = ((List<Cuenta>)Model);
+        }
+        @for (int i = 0; i < cuentas.Count; i++)
+        {
+            var item = cuentas[i];
+        <tr>
+            <td></td>
+            <td>@item.Nombre</td>
+            <td>@item.Apellido</td>
+            <td>@item.FechaNacimiento</td>
+            <td>@item.DNI</td>
+            <td>@item.Sexo</td>
+            <td>@item.Ciudad</td>
+            <td>@item.Direccion</td>
+            <td>@item.CorreoElectronico</td>
+            <td>@item.UserName</td>
+            <td>@item.Contrasenia</td>
+            <td>
+               
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+Program by Erick Llico

@@ -1,0 +1,38 @@
+﻿
+@{
+    
+    var cuenta = (Cuenta)Model;
+
+}
+
+<h1>Crear Cuenta</h1>
+
+<form action="/cuenta/Crear">
+    <!--method="post"-->
+    Nombre <input name="Nombre" value="@cuenta.Nombre" />
+    @Html.ValidationMessage("Nombre")
+    Apellido <input name="Apellido" value="@cuenta.Apellido" />
+    FechaNacimiento <input date="FechaNacimiento" value="@cuenta.FechaNacimiento" />
+    DNI <input name="DNI" value="@cuenta.DNI" />
+
+
+    Sexo <select name="Sexo">
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+    </select>
+
+
+    Ciudad <select name="Ciudad">
+        <option value="Lima">Lima</option>
+        <option value="Cajamarca">Cajamarca</option>
+        <option value="Jaen">Jaen</option>
+    </select>
+
+    Direccion <input name="Direccion" value="@cuenta.Direccion" />
+    CorreoElectronico <input name="CorreoElectronico" value="@cuenta.CorreoElectronico" />
+    UserName <input name="UserName" value="@cuenta.UserName" />
+    Contrasenia <input name="Contrasenia" value="@cuenta.Contrasenia" />
+
+   <button>Guardar</button>
+
+</form>
